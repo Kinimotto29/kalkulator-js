@@ -1,0 +1,126 @@
+* {
+    box-sizing: border-box;
+}
+
+#calc, .row, button {
+    position: relative;
+}
+
+#calc {
+    display: block;
+    height: 530px;
+    width: 340px;
+    margin: auto;
+    top: 10h;
+    background: #ffce00;
+}
+
+.row {
+    height: 80px;
+    width: 350px;
+    display: inline-block;
+    top: 20px;
+    left: 30px;
+    right: 30px;
+    overflow: hidden;
+}
+
+#screen, button {
+    height: 60px;
+    color: #fff;
+    font-family: 'Roboto', sans-serif;
+    transition: all 0.2s ease;
+    font-size: 1.5em;
+}
+
+#screen {
+    width: 280px;
+    cursor: text;
+    line-height: 2.5;
+    text-align: right;
+    letter-spacing: 5px;
+}
+
+button {
+    top: 0;
+    width: 60px;
+    background-color: #0b0b0b;
+    cursor: pointer;
+    margin-right: 10px;
+    border: none;
+    border-radius: 3px;
+    box-shadow: 0px 3px #2f2f2f;
+    text-align: center;
+}
+
+#screen, .operator {
+    background-color: #3e3e3e;
+}
+
+.operator {
+    box-shadow: 0px 3px #7e7e7e;
+}
+
+#del {
+    background-color: #029595;
+    box-shadow: 0px 3px #007c7c;
+}
+
+.eval {
+    background-color: #029a02;
+    box-shadow: 0px 3px #007200;
+}
+
+.sixth button:first-child,
+#del {
+    width: 134px;
+}
+
+button:hover {
+    background-color: #2f2f2f;
+    box-shadow: 0px 3px #242424;
+}
+
+.operator:hover {
+    background-color: #242424;
+    box-shadow: 0px 3px #1d1d1d;
+}
+
+#del:hover {
+    background-color: #14cece;
+    box-shadow: 0px 3px #39aaaa;
+}
+
+#eval:hover {
+    background-color: #00ff00;
+    box-shadow: 0px 3px #00a700;
+}
+
+#screen:hover,
+#screen:focus {
+    background-color: #2f2f2f;
+}
+
+button:focus {
+    outline: none;
+}
+
+button:active {
+    top: 3px;
+    box-shadow: 0px 0px #242424;
+}
+
+.operator:active {
+    box-shadow: 0px 0px #1d1d1d;
+    top: 3px;
+}
+
+#del:active {
+    box-shadow: 0px 0px #39aaaa;
+    top: 3px;
+}
+
+#eval:active {
+    box-shadow: 0px 0px #00a700;
+    top: 3px;
+}
