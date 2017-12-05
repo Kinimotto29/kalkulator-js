@@ -4,24 +4,19 @@ var operator = document.getElementsByClassName('operator');
 
 var screen = document.getElementById('screen');
 
-var zero = document.getElementById('zero');
-
 var period = document.getElementById('period');
 
-var limit;
+var equal = document.getElementById('equal');
 
-var output;
+var del = document.getElementById('del');
 
 for (var i = 0; i < num.length; i++) {
 
-
     num[i].addEventListener('click', function () {
 
-        output = screen.innerText += this.innerText;
+        var number = screen.innerText += this.innerText;
 
-        limit = output.length;
-
-        if (limit > 15) {
+        if (number.length > 15) {
 
             screen.innerText = this.innerText;
 
@@ -29,3 +24,55 @@ for (var i = 0; i < num.length; i++) {
 
     });
 }
+
+period.addEventListener('click', function () {
+
+    if (screen.innerText === '') {
+
+        var number = screen.innerText += '0.';
+
+    } else {
+
+        screen.innerText += '.';
+        
+    }
+
+});
+
+for (var i = 0; i < operator.length; i++) {
+
+    operator[i].addEventListener('click', function () {
+
+        if (screen.innerText === '') {
+
+            screen.innerText += '';
+
+        } else if (screen.innerText != '') {
+
+            screen.innerText += this.innerText;
+
+        }
+
+    });
+
+}
+
+equal.addEventListener('click', function () {
+
+    if (screen.innerText != '') {
+
+        screen.innerText = eval(screen.innerText);
+
+    } else {
+
+        screen.innerText = '';
+
+    }
+
+});
+
+del.addEventListener('click', function () {
+
+    screen.innerText = '';
+
+});
