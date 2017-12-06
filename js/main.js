@@ -15,7 +15,7 @@ for (var i = 0; i < num.length; i++) {
     num[i].addEventListener('click', function () {
 
         screen.innerText += this.innerText;
-        
+
     });
 }
 
@@ -26,9 +26,9 @@ period.addEventListener('click', function periodClick() {
         screen.innerText = '0.';
 
     } else {
-        
+
         screen.innerText += '.';
-        
+
     }
 
 });
@@ -41,7 +41,7 @@ for (var i = 0; i < operator.length; i++) {
 
             screen.innerText += '';
 
-        } else if (screen.innerText != '') {
+        } else if (screen.innerText !== '') {
 
             screen.innerText += this.innerText;
 
@@ -53,7 +53,7 @@ for (var i = 0; i < operator.length; i++) {
 
 equal.addEventListener('click', function () {
 
-    if (screen.innerText != '') {
+    if (screen.innerText !== '') {
 
         screen.innerText = eval(screen.innerText);
 
