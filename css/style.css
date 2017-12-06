@@ -22,7 +22,6 @@
     top: 20px;
     left: 30px;
     right: 30px;
-    overflow: hidden;
 }
 
 #screen, button {
@@ -39,6 +38,10 @@
     line-height: 2.5;
     text-align: right;
     letter-spacing: 5px;
+}
+
+#screen, .row {
+    overflow: hidden;
 }
 
 button {

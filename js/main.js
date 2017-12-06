@@ -14,25 +14,19 @@ for (var i = 0; i < num.length; i++) {
 
     num[i].addEventListener('click', function () {
 
-        var number = screen.innerText += this.innerText;
-
-        if (number.length > 15) {
-
-            screen.innerText = this.innerText;
-
-        }
-
+        screen.innerText += this.innerText;
+        
     });
 }
 
-period.addEventListener('click', function () {
+period.addEventListener('click', function periodClick() {
 
     if (screen.innerText === '') {
 
-        var number = screen.innerText += '0.';
+        screen.innerText = '0.';
 
     } else {
-
+        
         screen.innerText += '.';
         
     }
